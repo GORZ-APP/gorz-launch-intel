@@ -1,0 +1,11 @@
+# Smithery: runs the GORZ Launch Intel MCP server over stdio. GORZ_API_KEY is optional (free tier: 300 checks a day).
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      gorzApiKey:
+        type: string
+        description: Optional GORZ API key for higher limits and team, tool and wallet lookups (https://gorz.app/developers)
+  commandFunction: |-
+    (config) => ({ command: 'npx', args: ['-y', 'gorz-launch-intel'], env: config.gorzApiKey ? { GORZ_API_KEY: config.gorzApiKey } : {} })

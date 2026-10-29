@@ -1,0 +1,16 @@
+{
+  "name": "gorz-launch-intel",
+  "version": "0.1.0",
+  "description": "GORZ Launch Intel MCP server: how Solana (Pump.fun) coins were launched, for AI assistants and trading agents. Creator team bundles, launch tools, repeat launch teams and their record, sandwich bots.",
+  "type": "module",
+  "bin": {"gorz-launch-intel": "index.mjs"},
+  "main": "index.mjs",
+  "files": ["index.mjs", "README.md", "LICENSE"],
+  "engines": {"node": ">=18"},
+  "keywords": ["mcp", "model-context-protocol", "solana", "pump-fun", "memecoin", "bundle", "jito", "sandwich", "mev", "launch", "crypto", "ai-agent", "gorz"],
+  "homepage": "https://gorz.app/developers",
+  "license": "MIT",
+  "mcpName": "io.github.GORZ-APP/gorz-launch-intel",
+  "repository": {"type": "git", "url": "https://github.com/GORZ-APP/gorz-launch-intel"},
+  "dependencies": {"@modelcontextprotocol/sdk": "1.32.2", "zod": "4.6.7"}
+}

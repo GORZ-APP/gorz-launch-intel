@@ -1,0 +1,42 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.GORZ-APP/gorz-launch-intel",
+  "description": "How Solana coins were launched: creator team bundles, launch tools, repeat teams, sandwich bots.",
+  "repository": {
+    "url": "https://github.com/GORZ-APP/gorz-launch-intel",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "gorz-launch-intel",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "GORZ_API_KEY",
+          "description": "Optional GORZ API key for higher limits and team, tool and wallet lookups (https://gorz.app/developers)",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://gorz.app/mcp/launch",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional: Bearer gorz_… API key for higher limits and team, tool and wallet lookups (https://gorz.app/developers)",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
